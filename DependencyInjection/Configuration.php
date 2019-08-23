@@ -13,8 +13,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('fs_solr');
-        $rootNode = $treeBuilder->getRootNode();
+        $rootNode = new TreeBuilder('fs_solr');
         $rootNode->children()
             ->arrayNode('endpoints')
             ->useAttributeAsKey('name')
